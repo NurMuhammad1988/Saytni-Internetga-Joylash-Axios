@@ -59,24 +59,26 @@ export default class UserList extends Component {
         const { users } = this.state;
 
         return (
-            <div>
+            <div >
 
-                <h1>UserList</h1>
+                <h1 data-aos="flip-left"
+                data-aos-easing="ease-out-cubic"
+                data-aos-duration="2000">UserList</h1>
                 <div className="create">
                     <p><input type="text" name='name' onChange={this.handleInput} /></p>
                     <p><input type="text" name='job' onChange={this.handleInput} /></p>
 
-                    <button className='btn bg-black col-xxl-1 m-2 text-white' onClick={this.createUser}>Create</button>
+                    <button data-aos="fade-down-right" className='btn bg-black col-xxl-1 m-2 text-white' onClick={this.createUser}>Create</button>
                 </div>
 
                 {/*<button onClick={this.getUserFormList} className='btn btn-primary'>Get UsersList</button>*/}
 
-                <ul className='bg-warning text-decoration-none list-unstyled d-flex justify-content-around flex-wrap '>
+                <ul  className='bg-warning text-decoration-none list-unstyled d-flex justify-content-around flex-wrap '>
 
                     {
                         users.map(item => {
                             return (
-                                <li className='container col-xl-4 m-2 flex-wrap' key={item.id}>
+                                <li data-aos="fade-right" className='container col-xl-4 m-2 flex-wrap' key={item.id}>
 
                                     <img src={item.avatar} alt={item.first_name} />
 
@@ -89,8 +91,12 @@ export default class UserList extends Component {
 
                 </ul>
 
-                <button className='btn btn-warning col-xxl-1 m-2' onClick={() => this.getUserFormList(1)}>Page1</button>
-                <button className='btn btn-danger col-xxl-1 m-2' onClick={() => this.getUserFormList(2)}>Page2</button>
+                <button data-aos="flip-left"
+     data-aos-easing="ease-out-cubic"
+     data-aos-duration="2000" className='btn btn-warning col-xxl-1 m-2' onClick={() => this.getUserFormList(1)}>Page1</button>
+                <button data-aos="flip-left"
+     data-aos-easing="ease-out-cubic"
+     data-aos-duration="2000" className='btn btn-danger col-xxl-1 m-2' onClick={() => this.getUserFormList(2)}>Page2</button>
 
 
             </div >
